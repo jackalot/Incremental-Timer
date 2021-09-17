@@ -1,8 +1,10 @@
 const startBtn = document.querySelector(".Start");
 const stopBtn = document.querySelector(".Stop");
+let setOff = setInterval(countTimer, 1000);
+clearInterval(setOff); //clear it instantly, this sets it on global scope
 startBtn.addEventListener("click", () => {
-    let setOff = setInterval(countTimer, 1000)
     timeDone = false;
+    setOff = setInterval(countTimer, 1000); //repeat it here so it starts
 })
 stopBtn.addEventListener("click", () => {
     clearInterval(setOff);
