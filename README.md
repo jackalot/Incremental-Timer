@@ -4,7 +4,9 @@ Plan
 Create HTML
 test all links working together IE scripts, styles
 on index html make a p tag that has the class name: "timer"
+also make a button to start and stop timer
 on scripts, get the timer with query selector
+also get the buttons
 make a function
 {
     in that function, make a paramater called count
@@ -15,10 +17,11 @@ make a function
         subtract count by one
         if ( count is > 0)
         {
-            call the again
+            subtract 1 and continue
         }
         else {
            play a sound efect
         }
     }
-}*/
+}
+apply the above function to the buttons
