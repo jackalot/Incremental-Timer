@@ -1,10 +1,12 @@
 const startBtn = document.querySelector(".Start");
 const stopBtn = document.querySelector(".Stop");
 startBtn.addEventListener("click", () => {
-const time = setInterval(countTimer(36000), 1000);
+    timeToStop = false;
+countTimer(3600);
 })
+let timeToStop = false;
 stopBtn.addEventListener("click", () => {
-    clearInterval(time);
+    timeToStop = true;
 })
 const timer = document.querySelector(".timer");
 const body = document.querySelector("body");
