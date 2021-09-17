@@ -1,9 +1,11 @@
-const startBtn = document.querySelector(".start");
-const stopBtn = document.querySelector(".stop");
+const startBtn = document.querySelector(".Start");
+const stopBtn = document.querySelector(".Stop");
 startBtn.addEventListener("click", () => {
-countTimer();
+const time = setInterval(countTimer(36000), 1);
 })
-
+stopBtn.addEventListener("click", () => {
+    clearInterval(time);
+})
 function countTimer (count) {
-
+    console.log(count);
 }
