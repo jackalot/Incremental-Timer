@@ -1,16 +1,15 @@
 const startBtn = document.querySelector(".Start");
 const stopBtn = document.querySelector(".Stop");
 startBtn.addEventListener("click", () => {
-    timeToStop = false;
-    let setOff = setInterval(countTimer(10), 1000)
+    let setOff = setInterval(countTimer, 1000)
 })
-let timeToStop = false;
 stopBtn.addEventListener("click", () => {
-    timeToStop = true;
+    clearInterval(setOff);
 })
 const timer = document.querySelector(".timer");
 const body = document.querySelector("body");
-function countTimer (count) {
+let count = 10;
+function countTimer () {
     console.log(count)
     let hours = Math.round(count / 3600);
     let minutes = Math.round(count / 60);
@@ -20,6 +19,7 @@ function countTimer (count) {
     if(count > 0)
     {
         count -= 1;
+        console.log("count is subtracted");
     }
     else {
         console.log("sound effect");
