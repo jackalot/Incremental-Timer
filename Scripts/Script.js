@@ -14,11 +14,11 @@ function countTimer (count) {
     console.log(count);
   while(count > 0)
   {
-      let hours = count / 3600;
-      let minutes = count / 60;
-      let seconds = count % 60;
-
+      let hours = Math.round(count / 3600);
+      let minutes = Math.round(count / 60);
+      let seconds = Math.round(count % 60);
+      timer.textContent = `${hours}:${minutes}:${seconds}`;
+      body.append(timer);
+      count -= 1;
   }
-    timer.textContent = count;
-    body.append(timer);
 }
