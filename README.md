@@ -12,6 +12,7 @@ in those event listeners, do a setInterval for the below function
 make a function
 {
     in that function, make a paramater called count
+    while count > 0
         make count equate how much time we got by doing the math for hours, minutes, and seconds
         make that timer text = our hour minutes and seconds
         subtract count by one
