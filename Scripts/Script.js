@@ -12,7 +12,13 @@ const timer = document.querySelector(".timer");
 const body = document.querySelector("body");
 function countTimer (count) {
     console.log(count);
-    count++;
+  while(count > 0)
+  {
+      let hours = count / 3600;
+      let minutes = count / 60;
+      let seconds = count % 60;
+
+  }
     timer.textContent = count;
     body.append(timer);
 }
