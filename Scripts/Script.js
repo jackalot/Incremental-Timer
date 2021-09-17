@@ -19,7 +19,6 @@ function countTimer () {
     if(count > 0)
     {
         count -= 1;
-        console.log("count is subtracted");
     }
     else {
         console.log("sound effect");
